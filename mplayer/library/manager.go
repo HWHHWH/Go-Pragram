@@ -1,5 +1,5 @@
 //音乐管理器
-ackage library
+package library
 
 import (
 	"errors"
@@ -50,7 +50,7 @@ func (m *MusicManager) Remove(index int) *MusicEntry {
 		m.musics = append(m.musics[:index-1], m.musics[index+1:]...)
 	} else if index == 0 {
 		m.musics = make([]MusicEntry, 0)   //删除仅有的元素
-	} else { 
+	} else {
 		m.musics = m.musics[:index-1]      //删除最后一个元素
 	}
 	return removedMusic
